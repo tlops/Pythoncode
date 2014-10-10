@@ -1,4 +1,9 @@
-import simplegui
+import os
+import sys
+try:
+    import simplegui
+except ImportError:
+    import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 # Event handler
 def tick ():
