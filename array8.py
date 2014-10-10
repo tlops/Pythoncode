@@ -4,9 +4,9 @@
 # then sorts the list in order.
 
 filename = raw_input("Enter file name: ")
+if filename <1: filename="romeo.txt"
 fh = open(filename)
 lista = list()  # create an empty list called lista.
-
 for line in fh:
     line = line.rstrip()
     words = line.split()
