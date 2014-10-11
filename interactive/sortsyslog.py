@@ -146,10 +146,22 @@ final = zip(Applications,Origsent,Termsent)
 print "Name \t\t \tOrigsent Termsent"
 print "-"*47
 
-# this lines does the same as the last 2 lines
+## this lines does the same as the last 2 lines
+# uncomment any of the next two line to print the result on the screen!
+
 #for keys, values,z in final:
 #    print "{0:14} {1:>16n} {2:n}".format(keys,values,z)
 
+#for elements in final:
+#    print "{0:14} {1:>16n} {2:n}".format(elements[0],elements[1], elements[2])
+
+
+#### uncomment this point to direct the output to a file.
+myprint=open("syslogoutput.txt",'w+')
+myprint.write("Name \t\t \t\t\tOrigsent Termsent\n ")
+myprint.write("---------------------------------------------------\n")
 for elements in final:
-    print "{0:14} {1:>16n} {2:n}".format(elements[0],elements[1], elements[2])
+    myprint.writelines( "{0:14} {1:>16n} {2:n}\n".format(elements[0],elements[1], elements[2]))
+myprint.close()
+
 
