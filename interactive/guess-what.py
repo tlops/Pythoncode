@@ -2,7 +2,7 @@
     The computer generates a random number
     while you try to guess the number. you
     get clues as what your choice is higer
-    or lower than the secret number. 
+    or lower than the secret number.
 """
 
 import random
@@ -53,7 +53,7 @@ def control():
    global num_guess, counter, total
    try:
       answer = raw_input("\nDo you want to continue with\nthe game? Type 'Yes!' or No!")
-      if answer == "Yes" or "yes":
+      if answer == "Yes" or answer == "yes":
          num_guess = 7
          counter = 0
          total = 10
@@ -61,10 +61,10 @@ def control():
       elif answer == "No" or answer == "no":
          print "\nBye!"
          quit()
-
    except:
+   #else:
       print "Enter Yes or No..."
 
 
-
+#control()
 new_game()
