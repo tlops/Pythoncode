@@ -3,7 +3,7 @@
 # This script reads through any specified file and checks for the
 # 100 most occurred words in the file.
 # Falade O.T
-
+import time
 def openfil():
     try:
         fname = raw_input("Enter file name: ") # get file name
